@@ -1,5 +1,7 @@
-import { TabBar } from 'antd-mobile';
 import React from 'react';
+import { Button, TabBar } from 'antd-mobile';
+import life from "assets/life.svg";
+import life2 from "assets/life2.svg";
 
 class Tab extends React.Component<{},any> {
   constructor(props: {} | Readonly<{}>) {
@@ -54,13 +56,13 @@ class Tab extends React.Component<{},any> {
             icon={<div style={{
               width: '22px',
               height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
+              background: `url(${life}) center center /  21px 21px no-repeat` }}
             />
             }
             selectedIcon={<div style={{
               width: '22px',
               height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+              background: `url(${life2}) center center /  21px 21px no-repeat` }}
             />
             }
             selected={this.state.selectedTab === 'blueTab'}
