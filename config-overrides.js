@@ -6,6 +6,7 @@ module.exports = override(
     libraryName: 'antd-mobile',
     style: 'css',
   }),
+  // 资源路径别名
   addWebpackAlias({
     assets: path.resolve(__dirname, "./src/assets")
   })
