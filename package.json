@@ -18,7 +18,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "set browser=none&&react-app-rewired start",
+    "start": "set browser=none&&set port=2345&&react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
