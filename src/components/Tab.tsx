@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import { Button, TabBar } from 'antd-mobile';
 
 enum TabEnum {
@@ -9,7 +9,7 @@ enum TabEnum {
   ME
 }
 
-class Tab extends React.Component<{}, any> {
+class Tab extends Component<{}, any> {
   constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = {
