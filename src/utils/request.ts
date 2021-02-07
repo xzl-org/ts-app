@@ -24,6 +24,7 @@ const codeMessage = {
 const errorHandler = (error: { response: Response }): Response => {
   const { response } = error;
   if (response && response.status) {
+    // TODO codeMessage[response.status] https://github.com/ant-design/ant-design-pro/issues/8067
     const errorText = codeMessage[response.status as keyof typeof codeMessage] || response.statusText;
     // const { status, url } = response;
     Msg.successToast(errorText);
