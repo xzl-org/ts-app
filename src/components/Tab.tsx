@@ -22,6 +22,7 @@ class Tab extends Component<{}, any> {
   renderContent(pageText: {} | null | undefined) {
     return (
       <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
+        {require("./Home/index.tsx").default}
         <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
         <Button style={{ display: 'inline-block' }}
           onClick={(e) => {
