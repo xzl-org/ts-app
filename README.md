@@ -31,3 +31,7 @@
 
 :handshake: Welcome [PR](https://github.com/xzl-org/ts-app/pulls)
 
+## TODO
+
+- [ ] husky
+- [ ] [jest](https://www.youtube.com/watch?v=hOg40xBA_xk&list=PL_Ykv8s0HisuwMWMc-CvfDOFQVTRBoR--&index=6)
