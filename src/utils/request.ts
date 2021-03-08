@@ -2,7 +2,8 @@
 import { extend } from 'umi-request';
 import * as Msg from '../components/Msg';
 
-const codeMessage = {
+// const codeMessage = {
+const codeMessage: {[status: number]: string} = {
   200: '服务器成功返回请求的数据。',
   201: '新建或修改数据成功。',
   202: '一个请求已经进入后台排队（异步任务）。',
@@ -24,8 +25,9 @@ const codeMessage = {
 const errorHandler = (error: { response: Response }): Response => {
   const { response } = error;
   if (response && response.status) {
-    // TODO codeMessage[response.status] https://github.com/ant-design/ant-design-pro/issues/8067
-    const errorText = codeMessage[response.status as keyof typeof codeMessage] || response.statusText;
+    // https://github.com/ant-design/ant-design-pro/issues/8067
+    // const errorText = codeMessage[response.status as keyof typeof codeMessage] || response.statusText;
+    const errorText = codeMessage[response.status] || response.statusText;    
     // const { status, url } = response;
     Msg.successToast(errorText);
   } else if (!response) {
@@ -37,7 +39,8 @@ const errorHandler = (error: { response: Response }): Response => {
 /** 配置request请求时的默认参数 */
 const request = extend({
   errorHandler, // 默认错误处理
-  credentials: 'include', // 默认请求是否带上cookie
+  // CORS
+  // credentials: 'include', // 默认请求是否带上cookie
 });
 
 export default request;

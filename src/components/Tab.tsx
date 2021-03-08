@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, TabBar } from 'antd-mobile';
+import { HashRouter, Route } from "react-router-dom";
+// import Home from '../pages/Home';
 
 enum TabEnum {
   HOME,
@@ -22,7 +24,13 @@ class Tab extends React.Component<{}, any> {
   renderContent(pageText: {} | null | undefined) {
     return (
       <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        {require("./Home/index.tsx").default}
+        <HashRouter>
+          <div>
+            <Route exact path={["/", "/home"]}>
+              {require('@/pages/' + pageText).default}
+            </Route>
+          </div>
+        </HashRouter>
         <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
         <Button style={{ display: 'inline-block' }}
           onClick={(e) => {
@@ -58,7 +66,7 @@ class Tab extends React.Component<{}, any> {
           width: '22px',
           height: '22px',
           // background: `url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat`
-          background: `url(${require(`../assets/${key}.svg`).default}) center center /  21px 21px no-repeat`,
+          background: `url(${require(`assets/${key}.svg`).default}) center center /  21px 21px no-repeat`,
         }}
         />
         }
@@ -78,7 +86,7 @@ class Tab extends React.Component<{}, any> {
           });
         }}
       >
-        {this.renderContent(key)}
+        {this.renderContent(key.toLowerCase())}
       </TabBar.Item>
     )
 
