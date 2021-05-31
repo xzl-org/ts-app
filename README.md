@@ -11,6 +11,7 @@
 - [styled-components](https://styled-components.com/docs/basics#getting-started): [demo](https://www.joshwcomeau.com/css/styled-components/)
 - [react-router-dom](https://reactrouter.com/web/guides/quick-start)
 - [umi-request](https://github.com/umijs/umi-request)
+- [mobx-react](https://github.com/mobxjs/mobx-react)
 
 ## [Roadmap](https://github.com/xzl-org/ts-app/projects/1)
 
@@ -35,3 +36,4 @@
 
 - [ ] husky
 - [ ] [jest](https://www.youtube.com/watch?v=hOg40xBA_xk&list=PL_Ykv8s0HisuwMWMc-CvfDOFQVTRBoR--&index=6)
+- [ ] mobx - todo list: [1](https://segmentfault.com/a/1190000015387255) [2](https://zhuanlan.zhihu.com/p/88374561)
