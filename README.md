@@ -4,6 +4,8 @@
 
 > built by create-react-app, antd-mobile, typescript...
 
+[👉 preview](https://xzl-org.github.io/ts-app)
+
 ## Dependencies
 
 - [create-react-app](https://create-react-app.dev/): AKA cra

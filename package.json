@@ -1,6 +1,7 @@
 {
   "name": "ts-app",
   "version": "0.1.0",
+  "homepage": "https://xzl-org.github.io/ts-app",
   "private": true,
   "dependencies": {
     "ahooks": "^2.9.6",
@@ -19,7 +20,9 @@
     "start": "set BROWSER=NONE&&set PORT=5000&&react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +53,7 @@
     "@types/react-router-dom": "^5.1.7",
     "babel-plugin-import": "^1.13.3",
     "customize-cra": "^1.0.0",
+    "gh-pages": "^3.2.0",
     "react-app-rewired": "^2.1.8"
   }
 }
